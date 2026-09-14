@@ -474,6 +474,22 @@ button {
   font-size: 1.35rem;
 }
 
+.step_1 {
+  margin-top: 0px;
+  margin-bottom: 60px;
+}
+.step_2 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.step_3 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.step_4 {
+  margin-top: 60px;
+}
+
 .service-card p,
 .project-info p,
 .process-step p,
