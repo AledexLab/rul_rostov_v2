@@ -790,6 +790,26 @@ button {
     margin: 0;
   }
 
+  .hero-info {
+    order: 2;
+    grid-template-columns: 1fr;
+    /* align-items: center; */
+    place-content: center;
+  }
+
+  .hero-info-block {
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    margin: 2em auto 2em auto;
+    align-items: center;
+  }
+
+  .hero-info-block p,
+  span {
+    text-align: center;
+  }
+
   .cta-box,
   .footer-bottom {
     flex-direction: column;
@@ -815,5 +835,13 @@ button {
 
   .card-meta {
     grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    height: 70vh;
+  }
+
+  .project-image img {
+    height: 40vh;
   }
 }
