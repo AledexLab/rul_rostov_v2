@@ -125,6 +125,16 @@ if (portfolioTrack && portfolioSlides.length) {
   });
 }
 
+const ctaToggle = document.querySelector(".cta-toggle");
+const ctaBox = document.querySelector(".cta-box");
+
+if (ctaToggle && ctaBox) {
+  ctaToggle.addEventListener("click", (event) => {
+    event.preventDefault();
+    ctaBox.classList.add("is-open");
+  });
+}
+
 const yearElement = document.querySelector("#year");
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();

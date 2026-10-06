@@ -695,6 +695,76 @@ button {
   font-size: clamp(2rem, 2.4vw, 3rem);
 }
 
+.cta-actions {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: min(40vw, 460px);
+}
+
+.cta-toggle {
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cta-box.is-open .cta-toggle {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.96);
+}
+
+.cta-contact-panel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cta-box.is-open .cta-contact-panel {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.cta-contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text);
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.cta-contact-link:hover,
+.cta-contact-link:focus-visible {
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.cta-contact-link img {
+  width: 22px;
+  height: 22px;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+
 .site-footer {
   padding: 74px 0 28px;
   border-top: 1px solid var(--line);
@@ -843,6 +913,9 @@ button {
   .step_3,
   .step_4 {
     margin: 0;
+  }
+  .cta-contact-panel {
+    justify-content: center;
   }
 }
 
